@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Benzo Angelo D. Kuddana - IT Student Portfolio</title>
+  <style>
+    :root {
+      --primary: #d69e2e; /* Warm gold */
+      --bg: #f5f0e1; /* Light beige */
+      --card: #ffffff; /* White */
+      --text: #333333; /* Dark gray */
+      --muted: #7d7d7d; /* Gray */
+      --accent: #e2b93b; /* Lighter gold */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      background: var(--card);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: var(--primary);
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1rem;
+      margin: 0 0.5rem;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    nav button:hover {
+      color: var(--accent);
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 800px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+
+    section.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.5rem;
+    }
+
+    p, li {
+      color: var(--muted);
+    }
+
+    ul.skills {
+      margin-top: 1rem;
+      list-style: none;
+      padding: 0;
+    }
+
+    ul.skills li {
+      background: var(--card);
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .project {
+      background: var(--card);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .project img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      background: var(--bg);
+      color: var(--muted);
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Lester Aquino</div>
+    <nav>
+      <button onclick="scrollToSection('home')">Home</button>
+      <button onclick="scrollToSection('about')">About</button>
+      <button onclick="scrollToSection('skills')">Skills</button>
+      <button onclick="scrollToSection('projects')">Projects</button>
+      <button onclick="scrollToSection('contact')">Contact</button>
+    </nav>
+  </header>
+
+  <section id="home" class="active">
+    <img src="lester.jpg" alt="Welcome Image" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
+    <h2>Welcome</h2>
+    <p>Hello! I'm <strong>Lester Aquino</strong>, an IT student at STI College Puerto Princesa. I specialize in blending technology and creativity through both code and design.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am driven by curiosity, always eager to learn new tech skills and improve my design knowledge. Whether it's developing responsive websites or creating graphics, I believe in thoughtful, user-centered work.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills">
+      <li>HTML5 / CSS3 / JavaScript</li>
+      <li>Responsive Web Design</li>
+      <li>Figma & UI Prototyping</li>
+      <li>Graphic Design (Photoshop, Canva)</li>
+      <li>Blender (3D basics)</li>
+      <li>Git & GitHub</li>
+      <li>Communication & Teamwork</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="project">
+      <img src="https://images.shiksha.com/mediadata/ugcDocuments/images/wordpressImages/2021_12_Programming-vs-Web-Development.jpg" alt="Branding">
+      <p><strong>Programming and Development:</strong> Mobile App Development (Flutter, React Native, Swift, Kotlin)</p>
+    </div>
+    <div class="project">
+      <img src="https://www.proserveit.com/hubfs/Data%20Analysis.png" alt="Digital Art">
+      <p><strong>Data & Analytics:</strong> Machine Learning (TensorFlow, scikit-learn, PyTorch)</p>
+    </div>
+    <div class="project">
+      <img src="https://www.business.com/_next/image/?url=https%3A%2F%2Fimages.business.com%2Fapp%2Fuploads%2F2011%2F06%2F12131106%2FDelegation-Skills-1024x636.png&w=2048&q=75" alt="Sketching">
+      <p><strong>Soft Skills & Business Skills:</strong> Client Communication & Stakeholder Management.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> <a href="mailto:Lester24aquino@gmail.com" style="color: var(--accent);">Lester24aquino@gmail.com</a></p>
+    <p><strong>Phone:</strong> 09666966066</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Lester Aquino — IT Student Portfolio
+  </footer>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('section').forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
